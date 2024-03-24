@@ -3,7 +3,7 @@ import re
 
 def destination_data(data):
     pattern = r'([=\/])([A-Z][A-Za-z]{2,})\1'
-    matches = re.finditer(pattern, data
+    matches = re.finditer(pattern, data)
     travel_points = 0
     destinations = []
 
