@@ -6,6 +6,7 @@ pattern = r'@#+[A-Z][A-Za-z0-9]{4,}[A-Z]@#+'
 
 for _ in range(n):
     line = input()
+    # yay, we get to use fullmatch!
     match = re.fullmatch(pattern, line)
     if match:
         barcode = match.group()
