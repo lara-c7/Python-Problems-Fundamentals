@@ -25,9 +25,8 @@ while command != 'Exhibition':
     command = input()
 
 print("Plants for the exhibition:")
-for plant, plant_info in plants_dict.items():
-    if plant_info['ratings']:
-        print(f"- {plant}; Rarity: {plant_info['rarity']}; Rating: \
-{(sum(plant_info['ratings']) / len(plant_info['ratings'])):.2f}")
-    else:
-        print(f"- {plant}; Rarity: {plant_info['rarity']}; Rating: 0.00")
+for plant, plant_data in plants_dict.items():
+    average_rating = float(sum(plant_data['rating']) / len(plant_data['rating'])) if len(plant_data['rating']) > 0 \
+        else 0
+    print(f"- {plant}; Rarity: {plant_data['rarity']}; Rating: {average_rating:.2f}")
+
