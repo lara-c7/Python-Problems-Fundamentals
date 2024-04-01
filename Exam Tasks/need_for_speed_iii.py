@@ -3,7 +3,7 @@ car_dict = {}
 
 for _ in range(number_of_cars):
     car, mileage, fuel = input().split('|')
-    car_dict[car] = {'mileage': int(mileage), 'fuel': int(fuel)}
+    car_dict[car] = {'mileage': int(mileage), 'fuel': int(fuel)
 
 while True:
     tokens = input().split(' : ')
