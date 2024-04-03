@@ -12,6 +12,7 @@ while True:
     tokens = command.split(' - ')
     action = tokens[0]
     hero = tokens[1]
+    
     if action == 'CastSpell':
         mp_needed = int(tokens[2])
         spell_name = tokens[3]
@@ -20,6 +21,7 @@ while True:
             print(f"{hero} has successfully cast {spell_name} and now has {heroes_dict[hero]['mp']} MP!")
         else:
             print(f"{hero} does not have enough MP to cast {spell_name}!")
+    
     elif action == 'TakeDamage':
         damage = int(tokens[2])
         attacker = tokens[3]
@@ -29,6 +31,7 @@ while True:
         else:
             heroes_dict.pop(hero)
             print(f"{hero} has been killed by {attacker}!")
+    
     elif action == 'Recharge':
         amount = int(tokens[2])
         initial_mp = heroes_dict[hero]['mp']
@@ -39,6 +42,7 @@ while True:
             print(f"{hero} recharged for {new_amount} MP!")
             continue
         print(f"{hero} recharged for {amount} MP!")
+    
     elif action == 'Heal':
         amount = int(tokens[2])
         initial_hp = heroes_dict[hero]['hp']
